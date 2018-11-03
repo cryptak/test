@@ -1,0 +1,24 @@
+https://dividable.net/python/python-basic-tutorial/
+をステップ1クリア
+つまりProgateのステージ3までをクリア
+pythonでinputを使った形でじゃんけんするプログラムを作成できるレベル
+・四則演算
+・条件分け
+・独自の関数作成
+・ライブラリのimport
+Html, CSSを読んでサイトの作りがほんわかわかるレベル
+
+実行環境の作成
+Google Colaboratory
+使い方がよくわからない
+https://tadaken3.hatenablog.jp/entry/first-step-colabratory
+セルにコードを入力してCtrl+Enterで実行
+
+ということでProgateで作ったじゃんけんプログラムをGoogle Colaboratoryで再構成
+ランダムの出力で止まる
+ランダム処理をインポートするには？
+→こちらのミス, 本体に問題なし
+import random
+random.randint(x,y)
+関数名, 引数の入力を忘れないように
+
