@@ -1,0 +1,67 @@
+https://dividable.net/python/python-basic-tutorial/
+をステップ1クリア
+つまりProgateのステージ3までをクリア
+pythonでinputを使った形でじゃんけんするプログラムを作成できるレベル
+・四則演算
+・条件分け
+・独自の関数作成
+・ライブラリのimport
+Html, CSSを読んでサイトの作りがほんわかわかるレベル
+
+実行環境の作成
+Google Colaboratory
+使い方がよくわからない
+https://tadaken3.hatenablog.jp/entry/first-step-colabratory
+セルにコードを入力してCtrl+Enterで実行
+
+ということでProgateで作ったじゃんけんプログラムをGoogle Colaboratoryで再構成
+ランダムの出力で止まる
+ランダム処理をインポートするには？
+→こちらのミス, 本体に問題なし
+import random
+random.randint(x,y)
+関数名, 引数の入力を忘れないように
+[progateでやったじゃんけん]を作成
+https://github.com/cryptak/test/blob/master/progate%E3%81%A7%E3%82%84%E3%81%A3%E3%81%9F%E3%81%98%E3%82%83%E3%82%93%E3%81%91%E3%82%93.ipynb
+
+Python Webスクレイピング 実践入門 - Qiita
+https://qiita.com/Azunyan1111/items/9b3d16428d2bcc7c9406
+をやっていこう
+目的「1時間ごとに日本経済新聞にアクセスを行いその時の日経平均株価をcsvに記録する」
+の前に、他社のサイトの情報を使うときの注意事項
+岡崎市立中央図書館事件 - Wikipedia
+https://ja.wikipedia.org/wiki/%E5%B2%A1%E5%B4%8E%E5%B8%82%E7%AB%8B%E4%B8%AD%E5%A4%AE%E5%9B%B3%E6%9B%B8%E9%A4%A8%E4%BA%8B%E4%BB%B6
+要約：相手側が脆弱だとぶっ壊れてこっちが損害被るかも事件
+
+Webスクレイピングの注意事項一覧 - Qiita
+https://qiita.com/nezuq/items/c5e827e1827e7cb29011
+
+んじゃまー早速やっていきましょう
+$pop が必要?
+Google Colaboratoryではどうやるの？
+$pop はいらないみたい
+なくてもOKだった
+https://github.com/cryptak/test/blob/master/getNikkeiAve1.ipynb
+
+さて実践編
+1.日本経済新聞の日経平均株価ページにアクセスし、HTMLを取得する
+3.BeautifulSoupを使い日経平均株価を取得する
+4.csvに日付と時間と日経平均株価の値を1レコードで記述する
+
+まずは日経平均を出力するコード
+https://github.com/cryptak/test/blob/master/getNikkeiAve3.ipynb
+
+1.日本経済新聞>マーケット>株にアクセスをし、HTMLを拾ってくる
+2.日経平均株価はspan要素で囲ってあるので、HTML内部全てのspan要素を摘出する
+3.span要素に一つ一つをfor分で"mkc-stock_prices"がclassに設定されているかを確かめます
+4.設定されているclass見つかったら.stringで値を取得し、for分を終了
+5.取得した値をプリントする
+
+つまり
+
+1. サイトにアクセスしhtmlを入手
+2. html内の欲しい情報の要素をすべて摘出
+3. forでチェック
+4. 欲しい情報が見つかったら値を取得しfor終了
+5. printで出力
+
